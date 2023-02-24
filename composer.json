@@ -21,14 +21,16 @@
   ],
   "require": {
     "php": ">=7.2 || ^8.0",
-    "laravel/lumen-framework": "~6.0 || ~7.0 || ^8.0 || ^9.0",
-    "zircote/swagger-php": "~2.0 || 3.*",
-    "swagger-api/swagger-ui": "^3.0"
+    "laravel/lumen-framework": "~6.0 || ~7.0 || ^8.0 || ^9.0 || ^10.0",
+    "zircote/swagger-php": "4.*",
+    "swagger-api/swagger-ui": "^4.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "9.*",
-    "mockery/mockery": "1.*",
-    "php-coveralls/php-coveralls": "^2.0"
+    "rector/rector": "^0.15.18",
+    "driftingly/rector-laravel": "^0.15.0",
+    "phpunit/phpunit": "^10.0",
+    "mockery/mockery": "^1.5",
+    "php-coveralls/php-coveralls": "^2.5"
   },
   "autoload": {
     "files": [

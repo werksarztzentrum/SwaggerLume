@@ -17,7 +17,7 @@ class SecurityDefinitions
 
         if (is_array($securityConfig) && ! empty($securityConfig)) {
             $documentation = collect(
-                json_decode(file_get_contents($filename))
+                json_decode(file_get_contents($filename), null, 512, JSON_THROW_ON_ERROR)
             );
 
             $openApi3 = version_compare(config('swagger-lume.swagger_version'), '3.0', '>=');
@@ -91,6 +91,6 @@ class SecurityDefinitions
      */
     public static function arrayToObject($array)
     {
-        return json_decode(json_encode($array));
+        return json_decode(json_encode($array, JSON_THROW_ON_ERROR), null, 512, JSON_THROW_ON_ERROR);
     }
 }

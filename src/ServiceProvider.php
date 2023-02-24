@@ -42,21 +42,13 @@ class ServiceProvider extends BaseProvider
         $configPath = __DIR__.'/../config/swagger-lume.php';
         $this->mergeConfigFrom($configPath, 'swagger-lume');
 
-        $this->app->singleton('command.swagger-lume.publish', function () {
-            return new PublishCommand();
-        });
+        $this->app->singleton('command.swagger-lume.publish', fn() => new PublishCommand());
 
-        $this->app->singleton('command.swagger-lume.publish-config', function () {
-            return new PublishConfigCommand();
-        });
+        $this->app->singleton('command.swagger-lume.publish-config', fn() => new PublishConfigCommand());
 
-        $this->app->singleton('command.swagger-lume.publish-views', function () {
-            return new PublishViewsCommand();
-        });
+        $this->app->singleton('command.swagger-lume.publish-views', fn() => new PublishViewsCommand());
 
-        $this->app->singleton('command.swagger-lume.generate', function () {
-            return new GenerateDocsCommand();
-        });
+        $this->app->singleton('command.swagger-lume.generate', fn() => new GenerateDocsCommand());
 
         $this->commands(
             'command.swagger-lume.publish',

@@ -14,6 +14,7 @@ class CommandsTest extends LumenTestCase
         $this->setPaths();
     }
 
+    
     /** @test */
     public function canGenerateJsonDocumentation()
     {

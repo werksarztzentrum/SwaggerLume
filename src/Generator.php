@@ -22,7 +22,7 @@ class Generator
             $excludeDirs = config('swagger-lume.paths.excludes');
 
             if (version_compare(config('swagger-lume.swagger_version'), '3.0', '>=')) {
-                $swagger = \OpenApi\scan($appDir, ['exclude' => $excludeDirs]);
+                $swagger = (new \OpenApi\Generator())->scan([$appDir], ['exclude' => $excludeDirs]);
             } else {
                 $swagger = \Swagger\scan($appDir, ['exclude' => $excludeDirs]);
             }

@@ -22,6 +22,14 @@ matrix:
     env: REPORT_TESTS_COVERAGE=1 CACHE_NAME=SWAGGER
   - php: 7.4
     env: SWAGGER_VERSION=3.0 CACHE_NAME=OPEN_API
+  - php: 8.1
+    env: REPORT_TESTS_COVERAGE=1 CACHE_NAME=SWAGGER
+  - php: 8.1
+    env: SWAGGER_VERSION=3.0 CACHE_NAME=OPEN_API
+  - php: 8.2
+    env: REPORT_TESTS_COVERAGE=1 CACHE_NAME=SWAGGER
+  - php: 8.2
+    env: SWAGGER_VERSION=3.0 CACHE_NAME=OPEN_API
 cache:
   directories:
   - "$HOME/.composer/cache"
